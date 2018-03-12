@@ -1,0 +1,132 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <!-- Theme from https://blackrockdigital.github.io/startbootstrap-landing-page/ -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115475925-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115475925-1');
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home - SocialBrites</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href= "{% static 'css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+    <link href= "{% static 'css/simple-line-icons.css'%}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/landing-page.min.css'%}" rel="stylesheet">
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1021218361");
+</script>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">SocialBrites</a>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Find who you should follow next!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form method="post" role="form" id="form-search">
+              {% csrf_token %}
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="What topic are you interested in?" name="search" required>
+                </div>
+                <div class="col-12 col-md-3">
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <img src="{% static 'img/levels.png'%}" class="img-fluid m-auto text-primary" style="max-width:115px;"></i>
+              </div>
+              <h3>Content</h3>
+              <p class="lead mb-0">There’s a lot – and it’s growing. But that’s good news! For the first time ever, you can find just about whatever you are looking for from interesting people around the world. We bring it all in, categorize it on your specific interests and let you know who your specific interest. Now you just need some great interests!</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <img src="{% static 'img/search.png'%}" class="img-fluid m-auto text-primary" style="max-width:115px;"></i>
+              </div>
+              <h3>Search</h3>
+              <p class="lead mb-0">Amazing content is spread across many sites – Instagram, Facebook, Youtube, Twitter, Snapchat, and others – which makes finding it pretty hard. Who to follow, on what site, in what niche is surprisingly difficult. We make it easy! We collect data across platform and let you know who you should be following based on your interests.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <img src="{% static 'img/chat.png'%}" class="img-fluid m-auto text-primary" style="max-width:115px;"></i>
+              </div>
+              <h3>You</h3>
+              <p class="lead mb-0">So here’s a secret, most social media sites don’t care about giving you the best content for you, they care about getting you to stay on longer and give more clicks. We care about one thing – connecting you with the people who share your passions. That’s it. It’s pretty simple, but we think it’s powerful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+
+            <p class="text-muted small mb-4 mb-lg-0">&copy; SocialBrites 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script "{% static 'js/jquery.min.js'%}"></script>
+    <script "{% static 'js/bootstrap.bundle.min.js'%}"></script>
+
+
+
+  </body>
+
+</html>

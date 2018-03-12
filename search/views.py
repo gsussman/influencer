@@ -14,7 +14,7 @@ def home(request):
         a.save()
         return redirect('/error/')
     else:
-        return render(request, 'search/home.html', {})
+        return render(request, 'search/homev3.html', {})
         
 def error(request):
     return render(request, 'search/error.html', {})
