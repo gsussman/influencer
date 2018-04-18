@@ -36,6 +36,22 @@
     window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
       heap.load("1021218361");
 </script>
+
+<style type="text/css">
+  .grey {
+  background: #cccccc;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 15px;
+  text-align: center;
+  width: 1.6em; 
+}
+</style>
   </head>
 
   <body>
@@ -53,7 +69,10 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5" style="text-shadow: 0px 0px 30px #000000;">Find who you should follow next!</h1>
+            <h1 class="" style="text-shadow: 0px 0px 10px #000000;">Who should I follow next?</h1>
+          </div>
+          <div class="col-xl-9 mx-auto">
+            <p class="" style="text-shadow: 0px 0px 10px #000000; font-size: 28px;">We categorize content across social media platforms and provide you a list of people to follow based on your interests.</p>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form method="post" role="form" id="form-search">
@@ -72,8 +91,78 @@
       </div>
     </header>
 
+    <!-- Services -->
+    <section id="services" style="padding-top: 50px; padding-bottom: 50px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" style="padding-bottom: 24px;">How it Works</h2>
+            <h3 class="section-subheading text-muted"></h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+<span class="grey">1</span>
+            </span>
+            <h4 class="service-heading">Search</h4>
+            <p class="text-muted">Enter a topic of your interest in the search box. We cover all topics and social media platforms so we can provide a list of the best people to follow.</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+<span class="grey">2</span>
+            </span>
+            <h4 class="service-heading">Find</h4>
+            <p class="text-muted">Your search results will list the top people to follow for the topic you searched. You can learn more about who they are and what social media platforms they use. </p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+<span class="grey">3</span>
+            </span>
+            <h4 class="service-heading">Follow</h4>
+            <p class="text-muted">Click the links in your search results to follow the person. That simple! Then come back and tell us how we did.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcases -->
+    <section class="showcase bg-light" style="padding-top: 50px; padding-bottom: 50px;">
+      <div class="container-fluid p-0">
+                <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" style="padding-bottom: 24px;">Why SocialBrites</h2>
+            <h3 class="section-subheading text-muted"></h3>
+          </div>
+        </div>
+        <div class="row no-gutters align-items-center" style="padding-top:1em;">
+
+          <div class="col-lg-6 order-lg-2 text-white showcase-img""><img src="{% static 'img/levels.png'%}" class="center-block align-middle img-fluid mx-auto my-auto text-primary d-block text-center" style="max-width: 325px;"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Content</h2>
+            <p class="lead mb-0">There’s a lot – and it’s growing. But that’s good news! We capture social media content, categorize it, and let you know who to follow based on your interests. </p>
+          </div>
+        </div>
+        <div class="row no-gutters align-items-center">
+          <div class="col-lg-6 text-white showcase-img"><img src="{% static 'img/search.png'%}" class="img-fluid mx-auto text-primary d-block text-center" style="max-width:325px;"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Search</h2>
+            <p class="lead mb-0">Amazing content is spread across many sites – Instagram, Youtube, Snapchat, and others – which makes finding it pretty hard. We make it easy! We capture content across platforms and let you know who to follow based on your interests.</p>
+          </div>
+        </div>
+        <div class="row no-gutters align-items-center">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img"><img src="{% static 'img/chat.png'%}" class="img-fluid mx-auto d-block my-auto" style="max-width:325px;"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>You</h2>
+            <p class="lead mb-0">Here’s a secret, most social media sites don’t care about giving you the best content for you but getting you to stay on longer. We care about one thing – connecting you with the people who share your passions. It’s pretty simple, but we think it’s powerful.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Icons Grid -->
-    <section class="features-icons bg-light text-center">
+<!--    <section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
@@ -105,7 +194,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>  -->
 
     <!-- Footer -->
     <footer class="footer bg-light">
@@ -125,7 +214,19 @@
     <script "{% static 'js/jquery.min.js'%}"></script>
     <script "{% static 'js/bootstrap.bundle.min.js'%}"></script>
 
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ad275e5d7591465c709823c/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
   </body>
 
