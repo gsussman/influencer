@@ -18,3 +18,6 @@ def home(request):
         
 def error(request):
     return render(request, 'search/error.html', {})
+    
+def result_fitnessmotivation(request):
+    return render(request, 'search/results_fitnessmotivation1.html', {})
