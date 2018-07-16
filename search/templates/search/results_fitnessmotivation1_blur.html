@@ -4,7 +4,6 @@
 <html lang="en">
 <head>
 
-
 <!-- Hotjar Tracking Code for www.socialbrites.com -->
 <script>
     (function(h,o,t,j,a,r){
@@ -27,7 +26,6 @@
 
   gtag('config', 'UA-115475925-1');
 </script>
-
 
   <title>Top Influencers - Fitness Motivation</title>
   <meta charset="utf-8">
@@ -262,16 +260,44 @@ Here to talk all things that empower, make us feel beautiful, share stories, lau
 
     <!–– End Result ––>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">One more thing before getting fitness motivation…</h5>
+      </div>
+      <div class="modal-body">
 
+<p>We’re working hard to curate the best lists for you. Your feedback is invaluable to helping us get better. Please share your email address below. We promise not to spam you.</p>
+<p><b>Enter your email below to immediately get a list of the best fitness influencers.</b></p>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    
+      <div class="modal-footer">
+    <input class="btn btn-primary" type="submit" value="Submit" />
+      </div>
 
+</form>
 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#exampleModal').modal('show');
+    });
+</script>
 
 </div>
 
 <footer class="container-fluid text-center">
-    <p></p>
+  <p></p>
 </footer>
-
 
 </body>
 </html>

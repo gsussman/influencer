@@ -9,3 +9,9 @@ class Search(models.Model):
     
     def __str__(self):
         return self.search
+        
+class Email(models.Model):
+    email = models.EmailField(max_length=250)
+    
+    def __str__(self):
+        return self.email
