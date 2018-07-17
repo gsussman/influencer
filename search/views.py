@@ -18,7 +18,17 @@ def home(request):
         return render(request, 'search/homev3.html', {})
         
 def error(request):
-    return render(request, 'search/error.html', {})
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            print (email)
+            a = Email(email=email)
+            a.save()
+            return redirect('/result/pets/')
+    else:
+        form = PostForm()
+        return render(request, 'search/results_error_blur.html', {'form':form})
 
 def result_fitnessmotivation_blur(request):
     if request.method == 'POST':
