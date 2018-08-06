@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect
-from models import Search, Email
+from models import Search, Email, OrderedList, Influencer, NicheList
 from forms import PostForm
 
 # Create your views here.
@@ -61,3 +61,7 @@ def result_pets_blur(request):
     else:
         form = PostForm()
         return render(request, 'search/results_pets_blur.html', {'form':form})
+        
+def result_autotest(request):
+    influencers = OrderedList.objects.filter(list__nichename = 'Gene List 1').order_by('order')
+    return render(request, 'search/results_autotest.html', {'influencers': influencers})

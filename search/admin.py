@@ -2,10 +2,11 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from models import Search, Email
+from models import Search, Email, Influencer, NicheList, OrderedList
 
 # Register your models here.
-#admin.site.register(Email)
+admin.site.register(Influencer)
+admin.site.register(NicheList)
 
 class SearchAdmin(admin.ModelAdmin):
     readonly_fields = ('created',)
@@ -20,3 +21,9 @@ class EmailAdmin(admin.ModelAdmin):
     list_display_links = ('email', 'created')
 
 admin.site.register(Email, EmailAdmin)
+
+class OrderedListAdmin(admin.ModelAdmin):
+    list_display = ('list', 'influencers', 'order')
+    list_display_links = ('list', 'influencers', 'order')
+
+admin.site.register(OrderedList, OrderedListAdmin)
