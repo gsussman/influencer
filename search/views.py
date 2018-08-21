@@ -76,3 +76,7 @@ def result_pets_blur(request):
 def result_autotest(request):
     influencers = OrderedList.objects.filter(list__nichename = 'Gene List 1').order_by('order')
     return render(request, 'search/results_autotest.html', {'influencers': influencers})
+    
+def result_digital_marketing(request):
+    influencers = OrderedList.objects.filter(list__nichename = 'digital-marketing').order_by('order')
+    return render(request, 'search/results_digital-marketing.html', {'influencers': influencers})

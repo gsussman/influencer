@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^result/pets', views.result_pets, name='pets'),
     url(r'^result/b/pets', views.result_pets_blur, name='pets-blur'),
     url(r'^result/autotest', views.result_autotest, name='autotest'),
+    url(r'^result/digital-marketing', views.result_digital_marketing, name='digital-marketing'),
 ]
 
 if settings.DEBUG is True:
