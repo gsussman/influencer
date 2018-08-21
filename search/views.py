@@ -4,6 +4,9 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from models import Search, Email, OrderedList, Influencer, NicheList
 from forms import PostForm
+import operator
+
+from django.db.models import Q
 
 # Create your views here.
 def home(request):
@@ -13,6 +16,14 @@ def home(request):
         print (result['search'])
         a = Search(search = searchreq)
         a.save()
+        #if searchreq:
+        #    query_list = searchreq.split()
+        #    result = result.filter(
+        #        reduce(operator.and_,
+        #               (Q(title__icontains=q) for q in query_list)) |
+        #        reduce(operator.and_,
+        #               (Q(content__icontains=q) for q in query_list))
+        #    )
         return redirect('/error/')
     else:
         return render(request, 'search/homev3.html', {})
