@@ -87,16 +87,16 @@
              <b>Follow on</b>:<br> 
              <span style="font-size: 30px;">
 {% if influencer.influencers.facebook %}
-<a href="https://www.facebook.com/jiffpom/" class="fa fa-facebook"></a>
+<a href="{{ influencer.influencers.facebook }}" class="fa fa-facebook"></a>
 {% endif %}
 {% if influencer.influencers.twitter %}
-<a href="https://twitter.com/jiffpom" class="fa fa-twitter"></a>
+<a href="{{ influencer.influencers.twitter }}" class="fa fa-twitter"></a>
 {% endif %}
 {% if influencer.influencers.instagram %}
-<a href="https://www.instagram.com/jiffpom/" class="fa fa-instagram"></a>
+<a href="{{ influencer.influencers.instagram }}" class="fa fa-instagram"></a>
 {% endif %}
 {% if influencer.influencers.youtube %}
-<a href="https://www.youtube.com/user/jiffpom" class="fa fa-youtube"></a>
+<a href="{{ influencer.influencers.youtube }}" class="fa fa-youtube"></a>
 {% endif %}
            </p>
    </div>
