@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -12,6 +12,9 @@ urlpatterns = [
     url(r'^result/b/pets', views.result_pets_blur, name='pets-blur'),
     url(r'^result/autotest', views.result_autotest, name='autotest'),
     url(r'^result/digital-marketing', views.result_digital_marketing, name='digital-marketing'),
+#    url(r'^result/<nichelist>', views.result, name='result'),
+    url(r'^result/mental-health', views.result_mental_health, name='mental-health'),
+    
 ]
 
 if settings.DEBUG is True:

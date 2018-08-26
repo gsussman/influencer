@@ -80,3 +80,12 @@ def result_autotest(request):
 def result_digital_marketing(request):
     influencers = OrderedList.objects.filter(list__nichename = 'digital-marketing').order_by('order')
     return render(request, 'search/results_digital-marketing.html', {'influencers': influencers})
+    
+def result(request, nichelist):
+    print (nichelist)
+    influencers = OrderedList.objects.filter(list__nichename = nichelist).order_by('order')
+    return render(request, 'search/results_digital-marketing.html', {'influencers': influencers})
+    
+def result_mental_health(request):
+    influencers = OrderedList.objects.filter(list__nichename = 'mental-health').order_by('order')
+    return render(request, 'search/results_mental-health.html', {'influencers': influencers})
