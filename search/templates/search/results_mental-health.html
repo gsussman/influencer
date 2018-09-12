@@ -28,7 +28,7 @@
 </script>
 
 
-  <title>Top Influencers - Mental Health</title>
+  <title>Top Influencers - {{ influencer.list.nichename }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,7 +61,7 @@
   
 <div class="container">  
   <div class="page-header">
-    <h1>Mental Health</h1>      
+    <h1>{{ influencer.list.nichename }}</h1>      
   </div>
   
   
@@ -70,7 +70,6 @@
 
   <div class="row d-flex flex-row h-100" style="margin: 0 25px 0 25px;">
    <div class="col-lg-1 text-center align-middle" style="padding-top: 5%; font-size: 30px;">
-   #{{ influencer.order }}
    </div>
    <div class="col-lg-2 align-middle text-center">
     <img src="/media/{{ influencer.influencers.image }}" alt="" class="align-self-center center-block img-circle text-center img-responsive align-middle img-fluid my-auto" style="max-height:250px; padding-bottom: 10px;">
