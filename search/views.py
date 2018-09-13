@@ -87,5 +87,5 @@ def result(request, nichelist):
     return render(request, 'search/results_digital-marketing.html', {'influencers': influencers})
     
 def result_mental_health(request):
-    influencers = OrderedList.objects.filter(list__nichename = 'mental-health').order_by('order')
+    influencers = OrderedList.objects.filter(list__nichename = 'Mental Health').order_by('order')
     return render(request, 'search/results_mental-health.html', {'influencers': influencers})
