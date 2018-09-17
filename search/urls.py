@@ -14,6 +14,8 @@ urlpatterns = [
     url(r'^result/digital-marketing', views.result_digital_marketing, name='digital-marketing'),
 #    url(r'^result/<nichelist>', views.result, name='result'),
     url(r'^result/mental-health', views.result_mental_health, name='mental-health'),
+    url(r'^result/mental-health', views.result_mental_health, name='mental-health'),
+    url(r'^result/teaching-inspiration', views.result_mental_health, name='teaching-inspiration'),
     
 ]
 
