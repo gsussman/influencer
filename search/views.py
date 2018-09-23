@@ -3,8 +3,12 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect
 from models import Search, Email, OrderedList, Influencer, NicheList
-from forms import PostForm
+from forms import PostForm, UserForm, ProfileForm
 import operator
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required, permission_required
+from django.db import transaction
+from django.contrib import messages
 
 from django.db.models import Q
 
@@ -90,6 +94,27 @@ def result_mental_health(request):
     influencers = OrderedList.objects.filter(list__nichename = 'Mental Health').order_by('order')
     return render(request, 'search/results_mental-health.html', {'influencers': influencers})
     
-def result_mental_health(request):
+def result_teaching_inspiration(request):
     influencers = OrderedList.objects.filter(list__nichename = 'Teaching Inspiration').order_by('order')
     return render(request, 'search/results_mental-health.html', {'influencers': influencers})
+    
+@login_required
+@transaction.atomic
+def update_profile(request):
+    if request.method == 'POST':
+        user_form = UserForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, ('Your profile was successfully updated!'))
+            return redirect('/update-profile/')
+        else:
+            messages.error(request, ('Please correct the error below.'))
+    else:
+        user_form = UserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+    return render(request, 'search/profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })

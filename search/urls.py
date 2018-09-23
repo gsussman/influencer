@@ -15,7 +15,8 @@ urlpatterns = [
 #    url(r'^result/<nichelist>', views.result, name='result'),
     url(r'^result/mental-health', views.result_mental_health, name='mental-health'),
     url(r'^result/mental-health', views.result_mental_health, name='mental-health'),
-    url(r'^result/teaching-inspiration', views.result_mental_health, name='teaching-inspiration'),
+    url(r'^result/teaching-inspiration', views.result_teaching_inspiration, name='teaching-inspiration'),
+    url(r'^update-profile', views.update_profile, name='update_profile'),
     
 ]
 

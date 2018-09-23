@@ -2,11 +2,12 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from models import Search, Email, Influencer, NicheList, OrderedList
+from models import Search, Email, Influencer, NicheList, OrderedList, Profile
 
 # Register your models here.
 admin.site.register(Influencer)
 admin.site.register(NicheList)
+admin.site.register(Profile)
 
 class SearchAdmin(admin.ModelAdmin):
     readonly_fields = ('created',)
